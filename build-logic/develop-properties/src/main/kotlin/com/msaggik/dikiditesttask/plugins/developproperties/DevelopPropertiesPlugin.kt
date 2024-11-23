@@ -4,7 +4,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 import java.io.StringReader
-import java.util.*
+import java.util.Properties
 
 /**
  * Плагин для безопасного чтения данных develop.properties из build.gradle.kts

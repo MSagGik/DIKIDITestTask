@@ -22,3 +22,8 @@ dependencyResolutionManagement {
 includeBuild("build-logic")
 
 include(":app")
+include(":feature-home")
+include(":feature-catalog")
+include(":feature-promotions")
+include(":feature-myentries")
+include(":feature-more")

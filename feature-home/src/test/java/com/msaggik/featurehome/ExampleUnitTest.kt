@@ -1,4 +1,4 @@
-package com.msaggik.dikiditesttask
+package com.msaggik.featurehome
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.msaggik.dikiditesttask
+package com.msaggik.featurepromotions
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.msaggik.dikiditesttask", appContext.packageName)
+        assertEquals("com.msaggik.featurepromotions.test", appContext.packageName)
     }
 }

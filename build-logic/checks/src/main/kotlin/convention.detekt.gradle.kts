@@ -1,6 +1,6 @@
+import com.msaggik.dikiditesttask.withVersionCatalog
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
-import com.msaggik.dikiditesttask.withVersionCatalog
 
 plugins {
     id("io.gitlab.arturbosch.detekt")
