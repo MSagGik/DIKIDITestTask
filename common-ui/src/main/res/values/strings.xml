@@ -12,4 +12,5 @@
     <string name="authentication_required">authentication required</string>
     <string name="access_denied">access denied</string>
     <string name="the_requested_resource_was_not_found">the requested resource was not found</string>
+    <string name="unknown_error">unknown error</string>
 </resources>

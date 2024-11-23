@@ -19,6 +19,7 @@ fun Context.isConnected(): Boolean {
         )
 }
 
+@Suppress("CyclomaticComplexMethod")
 fun <T, S> Context.executeNetworkRequest(
     request: suspend () -> T,
     successHandler: (T) -> Resource<S>,

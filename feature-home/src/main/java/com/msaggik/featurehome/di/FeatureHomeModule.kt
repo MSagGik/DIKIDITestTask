@@ -11,7 +11,7 @@ import org.koin.dsl.module
 
 val featureHomeModule = module {
     // view-model
-    viewModel{
+    viewModel {
         HomeViewModel(
             homeInteractor = get()
         )

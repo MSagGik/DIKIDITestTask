@@ -78,6 +78,7 @@ object Mappers {
         }
     }
 
+    @Suppress("CyclomaticComplexMethod")
     private fun mapShares(sharesDto: SharesDto): Shares {
         return with(sharesDto) {
             Shares(
@@ -100,6 +101,7 @@ object Mappers {
         }
     }
 
+    @Suppress("CyclomaticComplexMethod")
     private fun mapCatalog(catalogDto: CatalogDto): Catalog {
         return with(catalogDto) {
             Catalog(
