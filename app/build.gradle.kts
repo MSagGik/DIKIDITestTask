@@ -64,6 +64,7 @@ dependencies {
     // modules
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
+    implementation(project(":data-network"))
     implementation(project(":feature-home"))
     implementation(project(":feature-catalog"))
     implementation(project(":feature-promotions"))

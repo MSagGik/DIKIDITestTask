@@ -5,4 +5,11 @@
     <string name="promotions">Promotions</string>
     <string name="catalog">Catalog</string>
     <string name="home">Home</string>
+    <string name="check_network_connection">Check network connection</string>
+    <string name="request_was_not_accepted">Request was not accepted %1$s</string>
+    <string name="unexpected_error">Unexpected error %1$s</string>
+    <string name="the_request_contains_invalid_data">the request contains invalid data</string>
+    <string name="authentication_required">authentication required</string>
+    <string name="access_denied">access denied</string>
+    <string name="the_requested_resource_was_not_found">the requested resource was not found</string>
 </resources>
