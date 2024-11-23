@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     id("com.msaggik.dikiditesttask.plugins.developproperties")
 }
 
@@ -35,6 +35,7 @@ android {
     }
 
     buildFeatures {
+        viewBinding = true
         buildConfig = true
     }
 }
@@ -43,16 +44,29 @@ dependencies {
     implementation(libs.androidX.core)
     implementation(libs.androidX.appCompat)
 
-    // UI layer libraries
+    // UI libraries
     implementation(libs.ui.material)
     implementation(libs.ui.constraintLayout)
 
-    // region Unit tests
+    // tests
     testImplementation(libs.unitTests.junit)
-    // endregion
-
-    // region UI tests
     androidTestImplementation(libs.uiTests.junitExt)
     androidTestImplementation(libs.uiTests.espressoCore)
-    // endregion
+
+    // lib
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.nav.ui)
+    implementation(libs.nav.fragment)
+    implementation(libs.koin)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // modules
+    implementation(project(":common-ui"))
+    implementation(project(":common-utils"))
+    implementation(project(":feature-home"))
+    implementation(project(":feature-catalog"))
+    implementation(project(":feature-promotions"))
+    implementation(project(":feature-myentries"))
+    implementation(project(":feature-more"))
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    color theme app-->
+    <color name="background_base">#FF000000</color>
+    <color name="background_one">#FF1C1C1E</color>
+    <color name="background_search">#FF3A3A3C</color>
+    <color name="text_header_one">#FFEFFEFE</color>
+    <color name="text_header_two">#FFFFFFFF</color>
+    <color name="text_search">#FF78787A</color>
+    <color name="icon_search">#FF70706B</color>
+    <color name="icon_one">#FFD7EEF5</color>
+    <color name="menu_on">#FF0D82DC</color>
+    <color name="menu_off">#FF868688</color>
+</resources>
