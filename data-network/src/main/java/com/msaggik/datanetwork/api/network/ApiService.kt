@@ -1,7 +1,7 @@
 package com.msaggik.datanetwork.api.network
 
+import com.msaggik.datanetwork.BuildConfig
 import com.msaggik.datanetwork.api.dto.HomeResponseDto
-import com.msaggik.dikiditesttask.BuildConfig
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
