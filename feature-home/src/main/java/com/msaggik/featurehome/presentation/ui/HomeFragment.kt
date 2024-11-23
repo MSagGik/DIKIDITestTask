@@ -1,7 +1,6 @@
 package com.msaggik.featurehome.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,15 +36,9 @@ class HomeFragment : Fragment() {
 
     private fun render(homeState: HomeState) {
         when (homeState) {
-            is HomeState.Loading -> {
-                Log.e("homeState", "homeState loading")
-            }
-            is HomeState.Content -> {
-                Log.e("homeState", "homeState homeResponse:\n${homeState.homeResponse}")
-            }
-            is HomeState.Error -> {
-                Log.e("homeState", "homeState error: ${homeState.errorMessage}")
-            }
+            is HomeState.Loading -> {}
+            is HomeState.Content -> {}
+            is HomeState.Error -> {}
         }
     }
 
