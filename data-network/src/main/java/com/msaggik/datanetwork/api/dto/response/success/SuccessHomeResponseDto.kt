@@ -5,11 +5,11 @@ import com.msaggik.datanetwork.api.dto.response.success.blocks.BlocksDto
 
 data class SuccessHomeResponseDto(
     @SerializedName("title")
-    val title: String,
+    val title: String?,
     @SerializedName("image")
-    val image: String,
+    val image: String?,
     @SerializedName("catalog_count")
-    val catalogCount: String,
+    val catalogCount: String?,
     @SerializedName("blocks")
     val blocks: BlocksDto,
     @SerializedName("order")

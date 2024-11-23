@@ -6,21 +6,21 @@ import com.msaggik.featurehome.domain.model.success.common.Image
 
 data class Catalog(
     @SerializedName("id")
-    val id: String,
+    val id: String?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("image")
-    val image: Image,
+    val image: Image?,
     @SerializedName("street")
-    val street: String,
+    val street: String?,
     @SerializedName("house")
-    val house: String,
+    val house: String?,
     @SerializedName("schedule")
     val schedule: Any,
     @SerializedName("lat")
-    val lat: String,
+    val lat: String?,
     @SerializedName("lng")
-    val lng: String,
+    val lng: String?,
     @SerializedName("categories")
     val categories: List<Any>,
     @SerializedName("categories_catalog")
@@ -34,11 +34,11 @@ data class Catalog(
     @SerializedName("vip_tariff")
     val vipTariff: Boolean,
     @SerializedName("reviewCount")
-    val reviewCount: String,
+    val reviewCount: String?,
     @SerializedName("backgrounds")
     val backgrounds: List<String>,
     @SerializedName("currency")
     val currency: Currency,
     @SerializedName("master_id")
-    val masterId: String? = null
+    val masterId: String?
 )

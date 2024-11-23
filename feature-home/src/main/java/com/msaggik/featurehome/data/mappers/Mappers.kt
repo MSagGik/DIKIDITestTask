@@ -18,72 +18,72 @@ object Mappers {
                 resultCode = resultCode,
                 errorHomeResponse = ErrorHomeResponse(
                     code = errorHomeResponseDto.code,
-                    message = errorHomeResponseDto.message
+                    message = errorHomeResponseDto.message ?:""
                 ),
                 successHomeResponse = SuccessHomeResponse(
-                    title = successHomeResponseDto.title,
-                    image = successHomeResponseDto.image,
-                    catalogCount = successHomeResponseDto.catalogCount,
+                    title = successHomeResponseDto.title ?:"",
+                    image = successHomeResponseDto.image ?:"",
+                    catalogCount = successHomeResponseDto.catalogCount ?:"",
                     blocks = Blocks(
                         vip = successHomeResponseDto.blocks.vip.map { vipDto ->
                             Vip(
-                                id = vipDto.id,
+                                id = vipDto.id ?:"",
                                 image = Image(
                                     thumb = vipDto.image.thumb,
                                     origin = vipDto.image.origin
                                 ),
-                                name = vipDto.name,
+                                name = vipDto.name ?:"",
                                 categories = vipDto.categories,
-                                award = vipDto.award,
+                                award = vipDto.award ?:"",
                                 vipTariff = vipDto.vipTariff
                             )
                         },
                         shares = Shares(
-                            id = successHomeResponseDto.blocks.shares.id,
-                            name = successHomeResponseDto.blocks.shares.name,
-                            timeStart = successHomeResponseDto.blocks.shares.timeStart,
-                            timeStop = successHomeResponseDto.blocks.shares.timeStop,
-                            publicTimeStart = successHomeResponseDto.blocks.shares.publicTimeStart,
-                            publicTimeStop = successHomeResponseDto.blocks.shares.publicTimeStop,
-                            discountValue = successHomeResponseDto.blocks.shares.discountValue,
-                            view = successHomeResponseDto.blocks.shares.view,
-                            usedCount = successHomeResponseDto.blocks.shares.usedCount,
-                            companyId = successHomeResponseDto.blocks.shares.companyId,
-                            icon = successHomeResponseDto.blocks.shares.icon,
-                            companyName = successHomeResponseDto.blocks.shares.companyName,
-                            companyStreet = successHomeResponseDto.blocks.shares.companyStreet,
-                            companyHouse = successHomeResponseDto.blocks.shares.companyHouse,
-                            companyImage = successHomeResponseDto.blocks.shares.companyImage
+                            id = successHomeResponseDto.blocks.shares.id ?:"",
+                            name = successHomeResponseDto.blocks.shares.name ?:"",
+                            timeStart = successHomeResponseDto.blocks.shares.timeStart ?:"",
+                            timeStop = successHomeResponseDto.blocks.shares.timeStop ?:"",
+                            publicTimeStart = successHomeResponseDto.blocks.shares.publicTimeStart ?:"",
+                            publicTimeStop = successHomeResponseDto.blocks.shares.publicTimeStop ?:"",
+                            discountValue = successHomeResponseDto.blocks.shares.discountValue ?:"",
+                            view = successHomeResponseDto.blocks.shares.view ?:"",
+                            usedCount = successHomeResponseDto.blocks.shares.usedCount ?:"",
+                            companyId = successHomeResponseDto.blocks.shares.companyId ?:"",
+                            icon = successHomeResponseDto.blocks.shares.icon ?:"",
+                            companyName = successHomeResponseDto.blocks.shares.companyName ?:"",
+                            companyStreet = successHomeResponseDto.blocks.shares.companyStreet ?:"",
+                            companyHouse = successHomeResponseDto.blocks.shares.companyHouse ?:"",
+                            companyImage = successHomeResponseDto.blocks.shares.companyImage ?:""
                         ),
-                        examples = successHomeResponseDto.blocks.examples,
-                        examples2 = successHomeResponseDto.blocks.examples2,
+                        examples = successHomeResponseDto.blocks.examples ?:"",
+                        examples2 = successHomeResponseDto.blocks.examples2 ?:"",
                         catalog = successHomeResponseDto.blocks.catalog.map { catalog ->
                             Catalog(
-                                id = catalog.id,
-                                name = catalog.name,
+                                id = catalog.id ?:"",
+                                name = catalog.name ?:"",
                                 image = Image(
                                     thumb = catalog.image.thumb,
                                     origin = catalog.image.origin
                                 ),
-                                street = catalog.street,
-                                house = catalog.house,
+                                street = catalog.street ?:"",
+                                house = catalog.house ?:"",
                                 schedule = catalog.schedule,
-                                lat = catalog.lat,
-                                lng = catalog.lng,
+                                lat = catalog.lat ?:"",
+                                lng = catalog.lng ?:"",
                                 categories = catalog.categories,
                                 categoriesCatalog = catalog.categoriesCatalog,
                                 rating = catalog.rating,
                                 isMaster = catalog.isMaster,
-                                award = catalog.award,
+                                award = catalog.award ?:"",
                                 vipTariff = catalog.vipTariff,
-                                reviewCount = catalog.reviewCount,
+                                reviewCount = catalog.reviewCount ?:"",
                                 backgrounds = catalog.backgrounds,
                                 currency = Currency(
                                     id = catalog.currency.id,
                                     title = catalog.currency.title,
                                     abbr = catalog.currency.abbr
                                 ),
-                                masterId = catalog.masterId
+                                masterId = catalog.masterId ?:""
                             )
                         }
                     ),

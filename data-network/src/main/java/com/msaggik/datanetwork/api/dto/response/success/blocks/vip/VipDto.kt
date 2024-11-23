@@ -5,11 +5,11 @@ import com.msaggik.datanetwork.api.dto.response.success.common.ImageDto
 
 data class VipDto(
     @SerializedName("id")
-    val id: String,
+    val id: String?,
     @SerializedName("image")
     val image: ImageDto,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("categories")
     val categories: List<String>,
     @SerializedName("award")

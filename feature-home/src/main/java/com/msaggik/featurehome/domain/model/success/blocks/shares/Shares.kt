@@ -4,33 +4,33 @@ import com.google.gson.annotations.SerializedName
 
 data class Shares(
     @SerializedName("id")
-    val id: String,
+    val id: String?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("time_start")
-    val timeStart: String,
+    val timeStart: String?,
     @SerializedName("time_stop")
-    val timeStop: String,
+    val timeStop: String?,
     @SerializedName("public_time_start")
-    val publicTimeStart: String,
+    val publicTimeStart: String?,
     @SerializedName("public_time_stop")
-    val publicTimeStop: String,
+    val publicTimeStop: String?,
     @SerializedName("discount_value")
-    val discountValue: String,
+    val discountValue: String?,
     @SerializedName("view")
-    val view: String,
+    val view: String?,
     @SerializedName("used_count")
-    val usedCount: String,
+    val usedCount: String?,
     @SerializedName("company_id")
-    val companyId: String,
+    val companyId: String?,
     @SerializedName("icon")
-    val icon: String,
+    val icon: String?,
     @SerializedName("company_name")
-    val companyName: String,
+    val companyName: String?,
     @SerializedName("company_street")
-    val companyStreet: String,
+    val companyStreet: String?,
     @SerializedName("company_house")
-    val companyHouse: String,
+    val companyHouse: String?,
     @SerializedName("company_image")
-    val companyImage: String
+    val companyImage: String?
 )

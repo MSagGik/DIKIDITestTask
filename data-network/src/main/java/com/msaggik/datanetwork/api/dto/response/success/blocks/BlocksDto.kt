@@ -11,9 +11,9 @@ data class BlocksDto(
     @SerializedName("shares")
     val shares: SharesDto,
     @SerializedName("examples")
-    val examples: String,
+    val examples: String?,
     @SerializedName("examples2")
-    val examples2: String,
+    val examples2: String?,
     @SerializedName("catalog")
     val catalog: List<CatalogDto>,
 )
