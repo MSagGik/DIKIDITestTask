@@ -9,7 +9,7 @@ import com.msaggik.featurehome.presentation.viewmodel.state.HomeState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-private const val DEFAULT_ID_CITY = 468902
+private const val DEFAULT_ID_CITY = 468_902
 
 class HomeViewModel(
     private val homeInteractor: HomeInteractor
@@ -62,7 +62,6 @@ class HomeViewModel(
             }
         }
     }
-
 
     init {
         getHomeInfoCityById()

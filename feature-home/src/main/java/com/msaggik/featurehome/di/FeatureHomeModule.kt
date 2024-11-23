@@ -10,21 +10,18 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val featureHomeModule = module {
-
     // view-model
     viewModel{
         HomeViewModel(
             homeInteractor = get()
         )
     }
-
     // domain
     single<HomeInteractor> {
         HomeInteractorImpl(
             homeNetworkRepository = get()
         )
     }
-
     // data
     single<HomeNetworkRepository> {
         HomeNetworkRepositoryImpl(

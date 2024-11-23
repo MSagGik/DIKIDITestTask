@@ -6,7 +6,8 @@ import com.msaggik.commonutils.network.Response
 import com.msaggik.datanetwork.api.dto.response.error.ErrorHomeResponseDto
 import com.msaggik.datanetwork.api.dto.response.success.SuccessHomeResponseDto
 
-data class HomeResponseDto (
+@Suppress("DataClassShouldBeImmutable")
+data class HomeResponseDto(
     override var resultCode: HttpStatus,
     @SerializedName("error")
     val errorHomeResponseDto: ErrorHomeResponseDto,

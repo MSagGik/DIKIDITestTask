@@ -30,93 +30,105 @@ object Mappers {
     }
 
     private fun mapErrorResponse(errorDto: ErrorHomeResponseDto): ErrorHomeResponse {
-        return ErrorHomeResponse(
-            code = errorDto.code,
-            message = errorDto.message ?: ""
-        )
+        return with(errorDto) {
+            ErrorHomeResponse(
+                code = code,
+                message = message ?: ""
+            )
+        }
     }
 
     private fun mapSuccessResponse(successDto: SuccessHomeResponseDto): SuccessHomeResponse {
-        return SuccessHomeResponse(
-            title = successDto.title ?: "",
-            image = successDto.image ?: "",
-            catalogCount = successDto.catalogCount ?: "",
-            blocks = mapBlocks(successDto.blocks),
-            order = successDto.order
-        )
+        return with(successDto) {
+            SuccessHomeResponse(
+                title = title ?: "",
+                image = image ?: "",
+                catalogCount = catalogCount ?: "",
+                blocks = mapBlocks(blocks),
+                order = order
+            )
+        }
     }
 
     private fun mapBlocks(blocksDto: BlocksDto): Blocks {
-        return Blocks(
-            vip = blocksDto.vip.map { mapVip(it) },
-            shares = mapShares(blocksDto.shares),
-            examples = blocksDto.examples ?: "",
-            examples2 = blocksDto.examples2 ?: "",
-            catalog = blocksDto.catalog.map { mapCatalog(it) }
-        )
+        return with(blocksDto) {
+            Blocks(
+                vip = vip.map { mapVip(it) },
+                shares = mapShares(shares),
+                examples = examples ?: "",
+                examples2 = examples2 ?: "",
+                catalog = catalog.map { mapCatalog(it) }
+            )
+        }
     }
 
     private fun mapVip(vipDto: VipDto): Vip {
-        return Vip(
-            id = vipDto.id ?: "",
-            image = Image(
-                thumb = vipDto.image.thumb,
-                origin = vipDto.image.origin
-            ),
-            name = vipDto.name ?: "",
-            categories = vipDto.categories,
-            award = vipDto.award ?: "",
-            vipTariff = vipDto.vipTariff
-        )
+        return with(vipDto) {
+            Vip(
+                id = id ?: "",
+                image = Image(
+                    thumb = image.thumb,
+                    origin = image.origin
+                ),
+                name = name ?: "",
+                categories = categories,
+                award = award ?: "",
+                vipTariff = vipTariff
+            )
+        }
     }
 
     private fun mapShares(sharesDto: SharesDto): Shares {
-        return Shares(
-            id = sharesDto.id ?: "",
-            name = sharesDto.name ?: "",
-            timeStart = sharesDto.timeStart ?: "",
-            timeStop = sharesDto.timeStop ?: "",
-            publicTimeStart = sharesDto.publicTimeStart ?: "",
-            publicTimeStop = sharesDto.publicTimeStop ?: "",
-            discountValue = sharesDto.discountValue ?: "",
-            view = sharesDto.view ?: "",
-            usedCount = sharesDto.usedCount ?: "",
-            companyId = sharesDto.companyId ?: "",
-            icon = sharesDto.icon ?: "",
-            companyName = sharesDto.companyName ?: "",
-            companyStreet = sharesDto.companyStreet ?: "",
-            companyHouse = sharesDto.companyHouse ?: "",
-            companyImage = sharesDto.companyImage ?: ""
-        )
+        return with(sharesDto) {
+            Shares(
+                id = id ?: "",
+                name = name ?: "",
+                timeStart = timeStart ?: "",
+                timeStop = timeStop ?: "",
+                publicTimeStart = publicTimeStart ?: "",
+                publicTimeStop = publicTimeStop ?: "",
+                discountValue = discountValue ?: "",
+                view = view ?: "",
+                usedCount = usedCount ?: "",
+                companyId = companyId ?: "",
+                icon = icon ?: "",
+                companyName = companyName ?: "",
+                companyStreet = companyStreet ?: "",
+                companyHouse = companyHouse ?: "",
+                companyImage = companyImage ?: ""
+            )
+        }
     }
 
     private fun mapCatalog(catalogDto: CatalogDto): Catalog {
-        return Catalog(
-            id = catalogDto.id ?: "",
-            name = catalogDto.name ?: "",
-            image = Image(
-                thumb = catalogDto.image.thumb,
-                origin = catalogDto.image.origin
-            ),
-            street = catalogDto.street ?: "",
-            house = catalogDto.house ?: "",
-            schedule = catalogDto.schedule,
-            lat = catalogDto.lat ?: "",
-            lng = catalogDto.lng ?: "",
-            categories = catalogDto.categories,
-            categoriesCatalog = catalogDto.categoriesCatalog,
-            rating = catalogDto.rating,
-            isMaster = catalogDto.isMaster,
-            award = catalogDto.award ?: "",
-            vipTariff = catalogDto.vipTariff,
-            reviewCount = catalogDto.reviewCount ?: "",
-            backgrounds = catalogDto.backgrounds,
-            currency = Currency(
-                id = catalogDto.currency.id,
-                title = catalogDto.currency.title,
-                abbr = catalogDto.currency.abbr
-            ),
-            masterId = catalogDto.masterId ?: ""
-        )
+        return with(catalogDto) {
+            Catalog(
+                id = id ?: "",
+                name = name ?: "",
+                image = Image(
+                    thumb = image.thumb,
+                    origin = image.origin
+                ),
+                street = street ?: "",
+                house = house ?: "",
+                schedule = schedule,
+                lat = lat ?: "",
+                lng = lng ?: "",
+                categories = categories,
+                categoriesCatalog = categoriesCatalog,
+                rating = rating,
+                isMaster = isMaster,
+                award = award ?: "",
+                vipTariff = vipTariff,
+                reviewCount = reviewCount ?: "",
+                backgrounds = backgrounds,
+                currency = Currency(
+                    id = currency.id,
+                    title = currency.title,
+                    abbr = currency.abbr
+                ),
+                masterId = masterId ?: ""
+            )
+        }
     }
 }

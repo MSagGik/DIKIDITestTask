@@ -20,12 +20,12 @@ val networkDataModule = module {
             .client(
                 OkHttpClient.Builder()
                     .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-                    .build())
+                    .build()
+            )
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
     }
-
 
     single<NetworkClient> {
         RetrofitNetworkClient(

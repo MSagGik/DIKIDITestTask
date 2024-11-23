@@ -92,7 +92,7 @@ internal class RetrofitNetworkClient(
 
     private suspend fun getHomeInfoCityById(dto: HomeRequestByIdCityDto): Response {
         val homeInfo = apiService.getHomeInfoCityById(cityId = dto.cityId)
-        Log.d(TAG,  homeInfo.toString())
+        Log.d(TAG, homeInfo.toString())
         Log.d(TAG, "cityId ${dto.cityId}")
         return homeInfo
     }
@@ -102,7 +102,7 @@ internal class RetrofitNetworkClient(
             lat = dto.lat,
             lng = dto.lng
         )
-        Log.d(TAG,  homeInfo.toString())
+        Log.d(TAG, homeInfo.toString())
         Log.d(TAG, "lat ${dto.lat}, lng ${dto.lng}")
         return homeInfo
     }
