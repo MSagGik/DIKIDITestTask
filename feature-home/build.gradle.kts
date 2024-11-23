@@ -56,8 +56,14 @@ dependencies {
     implementation(libs.koin)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler)
+    implementation(libs.logging.interceptor)
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
 
     // modules
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
+    implementation(project(":data-network"))
 }
