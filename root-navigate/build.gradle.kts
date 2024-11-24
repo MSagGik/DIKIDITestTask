@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.msaggik.featurehome"
+    namespace = "com.msaggik.rootnavigate"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -31,7 +31,6 @@ android {
         jvmTarget = libs.versions.jvmTarget.get().toString()
     }
     buildFeatures {
-        viewBinding = true
         compose = true
     }
     composeOptions {
@@ -65,11 +64,6 @@ dependencies {
     implementation(libs.koin)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.glide)
-    annotationProcessor(libs.glide.compiler)
-    implementation(libs.logging.interceptor)
-    implementation(libs.gson)
-    implementation(libs.converter.gson)
 
     implementation(libs.androidx.runtime)
     implementation(libs.androidx.runtime.livedata)
@@ -80,9 +74,4 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.animation)
     implementation(libs.androidx.material3)
-
-    // modules
-    implementation(project(":common-ui"))
-    implementation(project(":common-utils"))
-    implementation(project(":data-network"))
 }

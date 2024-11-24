@@ -37,6 +37,15 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get().toString()
+    }
+    packaging {
+        resources {
+            excludes += libs.versions.excludes.get().toString()
+        }
     }
 }
 
