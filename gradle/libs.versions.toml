@@ -6,6 +6,9 @@ java = "VERSION_1_8"
 minSdk = "26"
 compileSdk = "35"
 targetSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+jvmTarget = "1.8"
 
 # Detekt
 detekt = "1.23.3"
