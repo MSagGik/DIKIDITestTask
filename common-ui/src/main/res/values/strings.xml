@@ -13,4 +13,16 @@
     <string name="access_denied">access denied</string>
     <string name="the_requested_resource_was_not_found">the requested resource was not found</string>
     <string name="unknown_error">unknown error</string>
+    <string name="online_registration">Online registration</string>
+    <string name="location">Location</string>
+    <string name="catalog_page">Catalog page</string>
+    <string name="promotion_page">Promotions page</string>
+    <string name="my_entries_page">MyEntries page</string>
+    <string name="more_page">More page</string>
+    <string name="categories">Categories</string>
+    <string name="image_header_home">Image header home</string>
+    <string name="search_hint">Service, professional or place</string>
+    <string name="search">Search</string>
+    <string name="animation_in_toolbar">Animation in toolbar</string>
+    <string name="yaroslawl">Yaroslavl (Yaroslavl region)</string>
 </resources>

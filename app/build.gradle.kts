@@ -79,8 +79,10 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.animation)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui.tooling.preview)
 
     // modules
+    implementation(project(":root-navigate"))
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
     implementation(project(":data-network"))

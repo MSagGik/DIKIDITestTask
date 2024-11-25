@@ -6,7 +6,7 @@ import com.msaggik.featurehome.domain.usecase.HomeInteractor
 import com.msaggik.featurehome.domain.usecase.impl.HomeInteractorImpl
 import com.msaggik.featurehome.presentation.viewmodel.HomeViewModel
 import org.koin.android.ext.koin.androidContext
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 val featureHomeModule = module {

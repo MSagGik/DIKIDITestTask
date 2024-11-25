@@ -43,7 +43,7 @@ espressoCore = "3.6.1"
 
 jetpackNavigation = "2.8.4"
 
-koin = "3.5.0"
+koin = "4.0.0"
 
 kotlinxCoroutinesAndroid = "1.8.1"
 lifecycleViewmodelKtx = "2.8.7"
@@ -58,6 +58,7 @@ securityCrypto = "1.1.0-alpha06"
 
 retrofit = "2.11.0"
 okhttp = "4.12.0"
+uiTextGoogleFonts = "1.7.5"
 
 [libraries]
 
@@ -80,6 +81,8 @@ androidx-navigation-compose = { module = "androidx.navigation:navigation-compose
 androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtime" }
 androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtime" }
 androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "ui" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "ui" }
 
 # lib base
 androidX-core = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -106,6 +109,7 @@ nav-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.re
 
 # lib di
 koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 
 # lib manage treads
@@ -120,6 +124,7 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
