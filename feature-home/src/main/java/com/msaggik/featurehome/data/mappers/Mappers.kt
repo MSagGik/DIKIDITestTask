@@ -13,6 +13,7 @@ import com.msaggik.featurehome.domain.model.success.SuccessHomeResponse
 import com.msaggik.featurehome.domain.model.success.blocks.Blocks
 import com.msaggik.featurehome.domain.model.success.blocks.catalog.Catalog
 import com.msaggik.featurehome.domain.model.success.blocks.catalog.currency.Currency
+import com.msaggik.featurehome.domain.model.success.blocks.shares.Share
 import com.msaggik.featurehome.domain.model.success.blocks.shares.Shares
 import com.msaggik.featurehome.domain.model.success.blocks.vip.Vip
 import com.msaggik.featurehome.domain.model.success.common.Image
@@ -82,22 +83,30 @@ object Mappers {
     private fun mapShares(sharesDto: SharesDto): Shares {
         return with(sharesDto) {
             Shares(
-                id = id ?: "",
-                name = name ?: "",
-                timeStart = timeStart ?: "",
-                timeStop = timeStop ?: "",
-                publicTimeStart = publicTimeStart ?: "",
-                publicTimeStop = publicTimeStop ?: "",
-                discountValue = discountValue ?: "",
-                view = view ?: "",
-                usedCount = usedCount ?: "",
-                companyId = companyId ?: "",
-                icon = icon ?: "",
-                companyName = companyName ?: "",
-                companyStreet = companyStreet ?: "",
-                companyHouse = companyHouse ?: "",
-                companyImage = companyImage ?: ""
+                list = list.map { shareDto ->
+                    with(shareDto) {
+                        Share(
+                            id = id ?: "",
+                            name = name ?: "",
+                            timeStart = timeStart ?: "",
+                            timeStop = timeStop ?: "",
+                            publicTimeStart = publicTimeStart ?: "",
+                            publicTimeStop = publicTimeStop ?: "",
+                            discountValue = discountValue ?: "",
+                            view = view ?: "",
+                            usedCount = usedCount ?: "",
+                            companyId = companyId ?: "",
+                            icon = icon ?: "",
+                            companyName = companyName ?: "",
+                            companyStreet = companyStreet ?: "",
+                            companyHouse = companyHouse ?: "",
+                            companyImage = companyImage ?: ""
+                        )
+                    }
+                },
+                count = count
             )
+
         }
     }
 

@@ -25,4 +25,15 @@
     <string name="search">Search</string>
     <string name="animation_in_toolbar">Animation in toolbar</string>
     <string name="yaroslawl">Yaroslavl (Yaroslavl region)</string>
+    <string name="error_load_image">Error load image</string>
+    <string name="premium">Premium</string>
+    <string name="company_image">Company image</string>
+    <string name="before">before</string>
+    <string name="up_to">up to:</string>
+    <string name="until">until:</string>
+    <string name="incorrect_date">Incorrect date</string>
+    <string name="n_percent">%s%%</string>
+    <string name="view">view</string>
+    <string name="avatar">avatar</string>
+    <string name="more_big">MORE</string>
 </resources>
