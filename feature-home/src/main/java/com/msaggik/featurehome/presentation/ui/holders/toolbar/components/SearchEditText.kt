@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 internal fun RowScope.SearchEditText(
     searchQuery: String,
-    onQueryChange: (String)->Unit
+    onQueryChange: (String) -> Unit
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     var searchQueryExample by remember { mutableStateOf("") }

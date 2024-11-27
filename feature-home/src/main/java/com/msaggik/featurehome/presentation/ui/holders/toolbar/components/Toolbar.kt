@@ -36,7 +36,7 @@ internal fun Toolbar(
     toolbarHeightPx: Float,
 ) {
     val toolbarBottom by remember {
-        mutableFloatStateOf(headerHeightPx - toolbarHeightPx * ((headerHeightPx / toolbarHeightPx) / 2))
+        mutableFloatStateOf(headerHeightPx - toolbarHeightPx * (headerHeightPx / toolbarHeightPx / 2))
     }
 
     val showToolbar by remember {
@@ -61,8 +61,12 @@ internal fun Toolbar(
         exit = fadeOut(animationSpec = tween(DELAY_ANIMATION))
     ) {
         CenterAlignedTopAppBar(
-            modifier = Modifier.alpha(alpha).padding(top = 5.dp),
-            colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = MaterialTheme.colorScheme.background),
+            modifier = Modifier
+                .alpha(alpha)
+                .padding(top = 5.dp),
+            colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                containerColor = MaterialTheme.colorScheme.background
+            ),
             title = {
                 Text(
                     text = stringResource(com.msaggik.commonui.R.string.home),
