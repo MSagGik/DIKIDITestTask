@@ -59,7 +59,7 @@ internal fun CatalogHolder(
                 SubcomposeAsyncImage(
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop,
-                    model = it.image.origin,
+                    model = it.image.thumb,
                     error = {
                         Image(
                             contentScale = ContentScale.Crop,

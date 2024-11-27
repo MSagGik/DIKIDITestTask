@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DIKIDITestTask</string>
     <string name="more">Ещё</string>
     <string name="my_entries">Мои записи</string>
     <string name="promotions">Акции</string>

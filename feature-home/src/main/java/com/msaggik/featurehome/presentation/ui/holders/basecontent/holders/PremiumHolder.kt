@@ -65,7 +65,7 @@ internal fun PremiumHolder(
                         .size(60.dp)
                         .clip(RoundedCornerShape(16.dp)),
                     contentScale = ContentScale.Crop,
-                    model = it.image.origin,
+                    model = it.image.thumb,
                     contentDescription = stringResource(id = com.msaggik.commonui.R.string.logo)
                 )
                 Column(

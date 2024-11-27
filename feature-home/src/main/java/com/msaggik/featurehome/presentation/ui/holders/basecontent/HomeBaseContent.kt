@@ -82,6 +82,7 @@ internal fun HomeBaseContent(
                 catalogList = catalogList.sortedByDescending { it.rating }
             )
         }
+
         if(exampleList.isNotEmpty()) {
             ExamplesOfWorksHolder(examplesOfWorksUri = exampleList)
         }

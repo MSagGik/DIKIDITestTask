@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DIKIDITestTask</string>
     <string name="more">更多的</string>
     <string name="my_entries">我的参赛作品</string>
     <string name="promotions">促销</string>

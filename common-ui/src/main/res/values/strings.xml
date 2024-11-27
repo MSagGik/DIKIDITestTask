@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DIKIDITestTask</string>
+    <string name="app_name" translatable="false">DIKIDI Test Task</string>
     <string name="more">More</string>
     <string name="my_entries">My entries</string>
     <string name="promotions">Promotions</string>
