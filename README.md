@@ -13,18 +13,44 @@
 - **Сетевые технологии**: REST, Coroutines
 - **Настройки**: SharedPreferences,  механизмы шифрования с использованием `androidx.security:security-crypto`
 - **Библиотеки**:
-  - Jetpack Compose (для создания интерфейса и навигации)
-  - Koin (для внедрения зависимостей)
+  - Jetpack Compose (создание интерфейса и навигации)
+  - Material Desigh 3 (современый стиль UI)
+  - Koin (внедрение зависимостей)
   - Coil (для загрузки изображений в Jetpack Compose)
-  - Gson (для работы с JSON)
-  - LiveData (для управления жизненным циклом данных)
-  - Retrofit (для сетевых запросов)
-  - Android Jetpack (для упрощения разработки)
-  - Detekt (для статического анализа кода)
+  - Gson (работа с JSON)
+  - LiveData (управление жизненным циклом данных)
+  - Retrofit (сетевые запросы)
+  - Android Jetpack (упрощение разработки)
+  - Detekt (статический анализ кода)
 
 ## Архитектура приложения
 
 ![Архитектура](./media/architecture_diagram.png)
+
+## Скриншоты приложения:
+
+### Главный экран
+<p align="left">
+<img src="./media/screen_home_light_theme_one_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_home_light_theme_two_ru_en_zh.png"/>
+</p>
+
+<p align="left">
+<img src="./media/screen_home_dark_theme_one_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_home_dark_theme_two_ru_en_zh.png"/>
+</p>
+
+### Пример экрана в разработке
+<p align="left">
+<img src="./media/screen_catalog_light_theme_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_catalog_dark_theme_ru_en_zh.png"/>
+</p>
 
 ## Дополнительная информация
 Данное приложение является многомодульным, с адаптивной темой (светлой/тёмной), мультиязычным интерфейсом,
