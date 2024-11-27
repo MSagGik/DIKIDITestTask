@@ -42,6 +42,9 @@ import com.msaggik.featurehome.domain.model.network.success.blocks.shares.Share
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.Header
 import java.util.Locale
 
+private const val PARAMETER_WIDTH = 0.99f
+private const val PARAMETER_ALPHA = 0.55f
+
 @Composable
 internal fun PromotionsHolder(
     promotionState: LazyListState,
@@ -78,7 +81,7 @@ internal fun PromotionsHolder(
         items(shares) {
             Column(
                 modifier = Modifier
-                    .fillParentMaxWidth(0.99f)
+                    .fillParentMaxWidth(PARAMETER_WIDTH)
                     .clip(RoundedCornerShape(16.dp))
                     .background(color = MaterialTheme.colorScheme.surface)
             ) {
@@ -114,7 +117,7 @@ internal fun PromotionsHolder(
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(
                                     MaterialTheme.colorScheme.surface.copy(
-                                        0.55f
+                                        PARAMETER_ALPHA
                                     )
                                 )
                                 .padding(horizontal = 12.dp, vertical = 4.dp),
@@ -139,7 +142,7 @@ internal fun PromotionsHolder(
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(
                                     MaterialTheme.colorScheme.surface.copy(
-                                        0.55f
+                                        PARAMETER_ALPHA
                                     )
                                 )
                                 .padding(horizontal = 12.dp, vertical = 4.dp),

@@ -27,6 +27,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
+@Suppress("MagicNumber")
 @Composable
 internal fun HeaderToolbar(
     searchQuery: String,
@@ -40,7 +41,7 @@ internal fun HeaderToolbar(
         modifier = modifier
             .graphicsLayer {
                 translationY = -scroll.value.toFloat() / 3f
-                alpha = (-1f / headerHeightPx) * 2 * scroll.value + 1
+                alpha = -1f / headerHeightPx * 2 * scroll.value + 1
             }
     ) {
         Image(

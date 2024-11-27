@@ -33,6 +33,9 @@ import coil.compose.AsyncImage
 import com.msaggik.featurehome.domain.model.network.success.blocks.vip.Vip
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.Header
 
+private const val PARAMETER_WIDTH = 1.5f
+private const val PARAMETER_ALPHA = 0.17f
+
 @Composable
 internal fun PremiumHolder(
     premiumState: LazyListState,
@@ -69,7 +72,7 @@ internal fun PremiumHolder(
                     contentDescription = stringResource(id = com.msaggik.commonui.R.string.logo)
                 )
                 Column(
-                    modifier = Modifier.weight(1.5f)
+                    modifier = Modifier.weight(PARAMETER_WIDTH)
                 ) {
                     Text(
                         modifier = Modifier.padding(horizontal = 14.dp),
@@ -114,7 +117,7 @@ internal fun PremiumHolder(
                         .fillMaxWidth()
                         .padding(top = 16.dp),
                     thickness = 0.5.dp,
-                    color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.17f)
+                    color = MaterialTheme.colorScheme.tertiary.copy(alpha = PARAMETER_ALPHA)
                 )
             }
         }

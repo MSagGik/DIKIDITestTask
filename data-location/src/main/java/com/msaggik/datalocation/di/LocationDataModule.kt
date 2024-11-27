@@ -7,7 +7,7 @@ import org.koin.dsl.module
 
 val locationDataModule = module {
     // data
-    single <LocationApi> {
+    single<LocationApi> {
         LocationApiImpl(androidContext())
     }
 }

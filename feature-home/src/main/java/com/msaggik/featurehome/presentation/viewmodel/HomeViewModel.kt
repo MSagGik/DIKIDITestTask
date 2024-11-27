@@ -74,7 +74,7 @@ class HomeViewModel(
             val (location, error) = homeInteractor.getLocation()
             if (error != null) {
                 getHomeInfoCityById()
-                _stateLocation.postValue((LocationState.Error(message = error)))
+                _stateLocation.postValue(LocationState.Error(message = error))
             } else {
                 location?.let {
                     getHomeInfoCityByLocation(location.latitude.toString(), location.longitude.toString())

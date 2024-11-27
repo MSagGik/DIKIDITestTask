@@ -30,6 +30,7 @@ import coil.compose.SubcomposeAsyncImage
 import com.msaggik.featurehome.domain.model.network.success.blocks.catalog.Catalog
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.Header
 
+private const val ALPHA_COLOR = 0.3f
 @Composable
 internal fun CatalogHolder(
     numberCatalog: String,
@@ -64,15 +65,15 @@ internal fun CatalogHolder(
                         Image(
                             contentScale = ContentScale.Crop,
                             painter = painterResource(id = com.msaggik.commonui.R.drawable.catalog_placeholder),
-                            contentDescription = stringResource(id = com.msaggik.commonui.R.string.error_load_image),
-                            )
+                            contentDescription = stringResource(id = com.msaggik.commonui.R.string.error_load_image)
+                        )
                     },
                     contentDescription = stringResource(com.msaggik.commonui.R.string.categories)
                 )
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color.Black.copy(0.3f))
+                        .background(Color.Black.copy(ALPHA_COLOR))
                 )
                 Text(
                     modifier = Modifier.width(130.dp),
