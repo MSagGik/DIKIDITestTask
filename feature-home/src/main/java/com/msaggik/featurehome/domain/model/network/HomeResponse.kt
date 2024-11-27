@@ -1,7 +1,7 @@
 package com.msaggik.featurehome.domain.model.network
 
-import com.msaggik.commonutils.network.HttpStatus
 import com.msaggik.commonutils.network.HttpResponse
+import com.msaggik.commonutils.network.HttpStatus
 import com.msaggik.featurehome.domain.model.network.error.ErrorHomeResponse
 import com.msaggik.featurehome.domain.model.network.success.SuccessHomeResponse
 

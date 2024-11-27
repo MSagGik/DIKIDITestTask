@@ -18,17 +18,17 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.res.stringResource
+import com.msaggik.commonui.R
 import com.msaggik.commonutils.network.HttpStatus
+import com.msaggik.featurehome.presentation.ui.holders.basecontent.HomeBaseContent
+import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.CascadingAnimation
+import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.ErrorMessage
+import com.msaggik.featurehome.presentation.ui.holders.toolbar.ExpandableToolbar
 import com.msaggik.featurehome.presentation.viewmodel.HomeViewModel
 import com.msaggik.featurehome.presentation.viewmodel.state.HomeState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
-import com.msaggik.commonui.R
-import com.msaggik.featurehome.presentation.ui.holders.basecontent.HomeBaseContent
-import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.CascadingAnimation
-import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.ErrorMessage
-import com.msaggik.featurehome.presentation.ui.holders.toolbar.ExpandableToolbar
 
 private const val SCROLL_THRESHOLD = 30
 

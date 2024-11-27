@@ -18,7 +18,7 @@ interface HomeInteractor {
 
     suspend fun getLocation(): Pair<Location?, String?>
 
-    suspend fun setLastCoordinate(location: LocationSp) : Int
-    suspend fun getLastCoordinate() : LocationSp?
-    suspend fun deleteLastCoordinate() : Int
+    suspend fun setLastCoordinate(location: LocationSp): Int
+    suspend fun getLastCoordinate(): LocationSp?
+    suspend fun deleteLastCoordinate(): Int
 }

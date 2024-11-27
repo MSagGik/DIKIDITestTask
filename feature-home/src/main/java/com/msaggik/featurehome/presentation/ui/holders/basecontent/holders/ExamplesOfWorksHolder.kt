@@ -65,7 +65,9 @@ internal fun ExamplesOfWorksHolder(
             .padding(horizontal = 16.dp)
             .fillMaxWidth()
             .border(
-                1.dp, MaterialTheme.colorScheme.onTertiary, shape = RoundedCornerShape(16.dp)
+                1.dp,
+                MaterialTheme.colorScheme.onTertiary,
+                shape = RoundedCornerShape(16.dp)
             )
             .padding(horizontal = 12.dp, vertical = 10.dp),
         text = stringResource(com.msaggik.commonui.R.string.look),

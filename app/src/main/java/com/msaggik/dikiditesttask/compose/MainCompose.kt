@@ -31,9 +31,7 @@ import com.msaggik.rootnavigate.ui.ItemBottomNavigation
 
 @Composable
 fun MainCompose() {
-
     val navigationState = rememberNavigateState()
-
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
@@ -62,7 +60,7 @@ private fun BottomBar(
     NavigationBar(
         modifier = Modifier.fillMaxWidth(),
         containerColor = MaterialTheme.colorScheme.surface
-    ){
+    ) {
         val items = listOf(
             ItemBottomNavigation.Home,
             ItemBottomNavigation.Catalog,
@@ -73,7 +71,8 @@ private fun BottomBar(
         Row(
             modifier = Modifier
                 .background(color = MaterialTheme.colorScheme.surface)
-                .align(Alignment.CenterVertically).fillMaxWidth(),
+                .align(Alignment.CenterVertically)
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             items.forEach { item ->

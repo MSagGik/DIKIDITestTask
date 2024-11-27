@@ -57,9 +57,11 @@ internal fun HeaderToolbar(
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp)
         ) {
-            Spacer(modifier = Modifier
-                .height(18.dp)
-                .background(Color.Transparent))
+            Spacer(
+                modifier = Modifier
+                    .height(18.dp)
+                    .background(Color.Transparent)
+            )
             Text(
                 modifier = Modifier.background(Color.Transparent),
                 text = stringResource(id = com.msaggik.commonui.R.string.online_registration),

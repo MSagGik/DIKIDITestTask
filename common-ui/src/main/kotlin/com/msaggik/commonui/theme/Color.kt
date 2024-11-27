@@ -1,4 +1,5 @@
 package com.msaggik.commonui.theme
+
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFFEEFFF7)
@@ -230,7 +231,7 @@ val menuOffLight = Color(0xFF9E9EA0)
 
 val backgroundBaseDark = Color(0xFF000000)
 val backgroundOneDark = Color(0xFF1C1C1E)
-val backgroundSearchDark= Color(0xFF3A3A3C)
+val backgroundSearchDark = Color(0xFF3A3A3C)
 val textHeaderOneDark = Color(0xFFEFFEFE)
 val textHeaderTwoDark = Color(0xFFFFFFFF)
 val textSearchDark = Color(0xFF78787A)
