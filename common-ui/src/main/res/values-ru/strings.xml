@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="more">Ещё</string>
+    <string name="my_entries">Мои записи</string>
+    <string name="promotions">Акции</string>
+    <string name="catalog">Каталог</string>
+    <string name="home">Главная</string>
+    <string name="check_network_connection">Проверьте сетевое подключение</string>
+    <string name="request_was_not_accepted">Запрос не был принят %1$s</string>
+    <string name="unexpected_error">Неожиданная ошибка %1$s</string>
+    <string name="the_request_contains_invalid_data">Запрос содержит недействительные данные</string>
+    <string name="authentication_required">Требуется аутентификация</string>
+    <string name="access_denied">Доступ запрещен</string>
+    <string name="the_requested_resource_was_not_found">Запрошенный ресурс не найден</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="online_registration">Онлайн запись</string>
+    <string name="location">Расположение</string>
+    <string name="catalog_page">Страница «Каталог»</string>
+    <string name="promotion_page">Страница «Акции»</string>
+    <string name="my_entries_page">Страница «Мои записи»</string>
+    <string name="more_page">Страница «Ещё»</string>
+    <string name="categories">Категории</string>
+    <string name="image_header_home">Заголовок изображения главной страницы</string>
+    <string name="search_hint">Услуга, специалист или место</string>
+    <string name="search">Поиск</string>
+    <string name="animation_in_toolbar">Анимация на панели инструментов</string>
+    <string name="yaroslawl">Ярославль (Ярославская область)</string>
+    <string name="error_load_image">Ошибка загрузки изображения</string>
+    <string name="premium">Премиум</string>
+    <string name="company_image">Лого компании</string>
+    <string name="until">до:</string>
+    <string name="incorrect_date">Неверная дата</string>
+    <string name="more_big">ЕЩЁ</string>
+    <string name="enroll">Записаться</string>
+    <string name="popular">Популярные</string>
+    <string name="no_data">Нет данных</string>
+    <string name="form_distance">%s км</string>
+    <string name="examples_of_works">Примеры работ</string>
+    <string name="look">Смотреть</string>
+</resources>

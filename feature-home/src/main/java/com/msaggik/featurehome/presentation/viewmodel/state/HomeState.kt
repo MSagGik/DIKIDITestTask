@@ -1,6 +1,6 @@
 package com.msaggik.featurehome.presentation.viewmodel.state
 
-import com.msaggik.featurehome.domain.model.HomeResponse
+import com.msaggik.featurehome.domain.model.network.HomeResponse
 
 sealed interface HomeState {
 

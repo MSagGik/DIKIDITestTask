@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="more">More</string>
+    <string name="my_entries">My entries</string>
+    <string name="promotions">Promotions</string>
+    <string name="catalog">Catalog</string>
+    <string name="home">Home</string>
+    <string name="check_network_connection">Check network connection</string>
+    <string name="request_was_not_accepted">Request was not accepted %1$s</string>
+    <string name="unexpected_error">Unexpected error %1$s</string>
+    <string name="the_request_contains_invalid_data">The request contains invalid data</string>
+    <string name="authentication_required">Authentication required</string>
+    <string name="access_denied">Access denied</string>
+    <string name="the_requested_resource_was_not_found">The requested resource was not found</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="online_registration">Online registration</string>
+    <string name="location">Location</string>
+    <string name="catalog_page">Catalog page</string>
+    <string name="promotion_page">Promotions page</string>
+    <string name="my_entries_page">MyEntries page</string>
+    <string name="more_page">More page</string>
+    <string name="categories">Categories</string>
+    <string name="image_header_home">Image header home</string>
+    <string name="search_hint">Service, professional or place</string>
+    <string name="search">Search</string>
+    <string name="animation_in_toolbar">Animation in toolbar</string>
+    <string name="yaroslawl">Yaroslavl (Yaroslavl region)</string>
+    <string name="error_load_image">Error load image</string>
+    <string name="premium">Premium</string>
+    <string name="company_image">Company image</string>
+    <string name="until">until:</string>
+    <string name="incorrect_date">Incorrect date</string>
+    <string name="more_big">MORE</string>
+    <string name="enroll">Enroll</string>
+    <string name="popular">Popular</string>
+    <string name="no_data">No data</string>
+    <string name="form_distance">%s km</string>
+    <string name="examples_of_works">Examples of works</string>
+    <string name="look">Look</string>
+</resources>

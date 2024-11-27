@@ -28,10 +28,19 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get().toString()
     }
     buildFeatures {
         viewBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get().toString()
+    }
+    packaging {
+        resources {
+            excludes += libs.versions.excludes.get().toString()
+        }
     }
 }
 
@@ -54,6 +63,7 @@ dependencies {
     implementation(libs.nav.ui)
     implementation(libs.nav.fragment)
     implementation(libs.koin)
+    implementation(libs.koin.compose)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.glide)
@@ -62,8 +72,21 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.converter.gson)
 
+    implementation(libs.androidx.runtime)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.animation)
+    implementation(libs.androidx.material3)
+    implementation(libs.coil.compose)
+
     // modules
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
     implementation(project(":data-network"))
+    implementation(project(":data-location"))
+    implementation(project(":data-sp"))
 }

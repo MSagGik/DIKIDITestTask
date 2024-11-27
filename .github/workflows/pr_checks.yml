@@ -2,7 +2,7 @@ name: PR checks
 
 on:
     push:
-        branches: [ "main", "develop" ]
+        branches: [ "main", "develop", "develop_compose" ]
     pull_request:
 
 env:

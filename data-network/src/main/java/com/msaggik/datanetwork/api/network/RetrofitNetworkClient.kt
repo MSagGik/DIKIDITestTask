@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.msaggik.commonutils.all.Utils
 import com.msaggik.commonutils.network.HttpStatus
-import com.msaggik.commonutils.network.Response
+import com.msaggik.commonutils.network.HttpResponse
 import com.msaggik.commonutils.network.isConnected
 import com.msaggik.datanetwork.api.NetworkClient
 import com.msaggik.datanetwork.api.dto.HomeResponseDto
@@ -27,10 +27,10 @@ internal class RetrofitNetworkClient(
     private val apiService: ApiService,
 ) : NetworkClient {
 
-    override suspend fun doRequest(dto: Any): Response {
+    override suspend fun doRequest(dto: Any): HttpResponse {
         Log.d(TAG, "Starting request to server")
         if (!context.isConnected()) {
-            return object : Response {
+            return object : HttpResponse {
                 override var resultCode = HttpStatus.NO_INTERNET
             }
         }
@@ -49,7 +49,7 @@ internal class RetrofitNetworkClient(
                 onFailure = { e ->
                     Utils.outputStackTrace(TAG, e)
                     val modCodeHTTP = modifiedCodeHTTP(e)
-                    object : Response {
+                    object : HttpResponse {
                         override var resultCode = modCodeHTTP
                     }
                 }
@@ -84,20 +84,20 @@ internal class RetrofitNetworkClient(
         }
     }
 
-    private suspend fun getHomeInfoRequest(): Response {
+    private suspend fun getHomeInfoRequest(): HttpResponse {
         val homeInfo = apiService.getHomeInfo()
         Log.d(TAG, homeInfo.toString())
         return homeInfo
     }
 
-    private suspend fun getHomeInfoCityById(dto: HomeRequestByIdCityDto): Response {
+    private suspend fun getHomeInfoCityById(dto: HomeRequestByIdCityDto): HttpResponse {
         val homeInfo = apiService.getHomeInfoCityById(cityId = dto.cityId)
         Log.d(TAG, homeInfo.toString())
         Log.d(TAG, "cityId ${dto.cityId}")
         return homeInfo
     }
 
-    private suspend fun getHomeInfoCityByLocation(dto: HomeRequestByIdLocationDto): Response {
+    private suspend fun getHomeInfoCityByLocation(dto: HomeRequestByIdLocationDto): HttpResponse {
         val homeInfo = apiService.getHomeInfoCityByLocation(
             lat = dto.lat,
             lng = dto.lng
