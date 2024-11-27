@@ -1,6 +1,5 @@
 package com.msaggik.featurehome.presentation.ui.holders.basecontent
 
-import android.util.Log
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -51,15 +50,6 @@ internal fun HomeBaseContent(
         val example1 = homeResponse.blocks.examples
         val example2 = homeResponse.blocks.examples2
 
-        Log.e("title", "title $title")
-        Log.e("title", "image $image")
-        Log.e("title", "catalogCount $catalogCount")
-        Log.e("title", "catalogList $catalogList")
-        Log.e("title", "shares $shares")
-        Log.e("title", "vip $vip")
-        Log.e("title", "example1 $example1")
-        Log.e("title", "example2 $example2")
-
         if(catalogList.isNotEmpty()) {
             CatalogHolder(
                 numberCatalog = catalogCount,
@@ -88,5 +78,6 @@ internal fun HomeBaseContent(
                 catalogList = catalogList.sortedByDescending { it.rating }
             )
         }
+        Spacer(Modifier.height(19.dp))
     }
 }

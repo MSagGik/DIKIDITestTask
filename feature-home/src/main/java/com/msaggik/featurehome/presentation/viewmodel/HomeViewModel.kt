@@ -1,6 +1,5 @@
 package com.msaggik.featurehome.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -71,15 +70,12 @@ class HomeViewModel(
 
     fun requestLocation() {
         viewModelScope.launch(Dispatchers.IO) {
-            Log.e("_stateLocation", "Loading")
             _stateLocation.postValue(LocationState.Loading)
             val (location, error) = homeInteractor.getLocation()
             if (error != null) {
-                Log.e("_stateLocation", "Error")
                 getHomeInfoCityById()
                 _stateLocation.postValue((LocationState.Error(message = error)))
             } else {
-                Log.e("_stateLocation", "location? $location")
                 location?.let {
                     getHomeInfoCityByLocation(location.latitude.toString(), location.longitude.toString())
                     _stateLocation.postValue(LocationState.Content(it))
@@ -94,13 +90,5 @@ class HomeViewModel(
                 }
             }
         }
-    }
-
-
-
-    init {
-//        getHomeInfoCityById()
-//        getHomeInfoCityByLocation("57.6299", "39.8737")
-//        requestLocation()
     }
 }

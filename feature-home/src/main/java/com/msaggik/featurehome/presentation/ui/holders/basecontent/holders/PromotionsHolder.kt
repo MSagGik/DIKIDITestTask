@@ -119,7 +119,7 @@ internal fun PromotionsHolder(
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurface,
                             text = buildAnnotatedString {
-                                append(stringResource(com.msaggik.commonui.R.string.until))
+                                append(stringResource(com.msaggik.commonui.R.string.until) + " ")
                                 withStyle(SpanStyle(fontWeight = FontWeight.Bold)) {
                                     append(
                                         Utils.formatDate(

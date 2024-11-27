@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DIKIDITestTask</string>
     <string name="more">More</string>
@@ -30,14 +31,9 @@
     <string name="company_image">Company image</string>
     <string name="until">until:</string>
     <string name="incorrect_date">Incorrect date</string>
-    <string name="n_percent" translatable="false">%s%%</string>
-    <string name="view" translatable="false">View</string>
-    <string name="avatar" translatable="false">Avatar</string>
     <string name="more_big">MORE</string>
-    <string name="logo" translatable="false">Logo</string>
     <string name="enroll">Enroll</string>
     <string name="popular">Popular</string>
     <string name="no_data">No data</string>
-    <string name="star" translatable="false">Star</string>
     <string name="form_distance">%s km</string>
 </resources>
