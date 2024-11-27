@@ -36,4 +36,6 @@
     <string name="popular">Популярные</string>
     <string name="no_data">Нет данных</string>
     <string name="form_distance">%s км</string>
+    <string name="examples_of_works">Примеры работ</string>
+    <string name="look">Смотреть</string>
 </resources>

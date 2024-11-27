@@ -36,4 +36,6 @@
     <string name="popular">受欢迎的</string>
     <string name="no_data">没有数据</string>
     <string name="form_distance">%s km</string>
+    <string name="examples_of_works">作品示例</string>
+    <string name="look">看</string>
 </resources>

@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 internal fun Header(
     title: String,
-    number: String
+    number: String = ""
 ) {
     Row(
         modifier = Modifier.padding(16.dp),

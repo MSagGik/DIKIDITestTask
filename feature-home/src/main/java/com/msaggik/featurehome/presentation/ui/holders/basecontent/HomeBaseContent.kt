@@ -15,6 +15,7 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.unit.dp
 import com.msaggik.featurehome.domain.model.network.success.SuccessHomeResponse
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.holders.CatalogHolder
+import com.msaggik.featurehome.presentation.ui.holders.basecontent.holders.ExamplesOfWorksHolder
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.holders.PopularHolder
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.holders.PremiumHolder
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.holders.PromotionsHolder
@@ -49,6 +50,9 @@ internal fun HomeBaseContent(
         val shares = homeResponse.blocks.shares.list
         val example1 = homeResponse.blocks.examples
         val example2 = homeResponse.blocks.examples2
+        val exampleList = mutableListOf<String>()
+        if(example1.isNotEmpty()) exampleList.add(example1)
+        if(example2.isNotEmpty()) exampleList.add(example2)
 
         if(catalogList.isNotEmpty()) {
             CatalogHolder(
@@ -78,6 +82,10 @@ internal fun HomeBaseContent(
                 catalogList = catalogList.sortedByDescending { it.rating }
             )
         }
+        if(exampleList.isNotEmpty()) {
+            ExamplesOfWorksHolder(examplesOfWorksUri = exampleList)
+        }
+
         Spacer(Modifier.height(19.dp))
     }
 }

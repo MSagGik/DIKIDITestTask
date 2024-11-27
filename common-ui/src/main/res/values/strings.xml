@@ -40,4 +40,6 @@
     <string name="no_data">No data</string>
     <string name="star" translatable="false">Star</string>
     <string name="form_distance">%s km</string>
+    <string name="examples_of_works">Examples of works</string>
+    <string name="look">Look</string>
 </resources>
