@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.nav.ui)
     implementation(libs.nav.fragment)
     implementation(libs.koin)
+    implementation(libs.koin.compose)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.glide)
@@ -80,9 +81,12 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.animation)
     implementation(libs.androidx.material3)
+    implementation(libs.coil.compose)
 
     // modules
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
     implementation(project(":data-network"))
+    implementation(project(":data-location"))
+    implementation(project(":data-sp"))
 }
