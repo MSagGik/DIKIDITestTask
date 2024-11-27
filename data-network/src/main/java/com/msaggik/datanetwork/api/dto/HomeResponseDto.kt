@@ -2,7 +2,7 @@ package com.msaggik.datanetwork.api.dto
 
 import com.google.gson.annotations.SerializedName
 import com.msaggik.commonutils.network.HttpStatus
-import com.msaggik.commonutils.network.Response
+import com.msaggik.commonutils.network.HttpResponse
 import com.msaggik.datanetwork.api.dto.response.error.ErrorHomeResponseDto
 import com.msaggik.datanetwork.api.dto.response.success.SuccessHomeResponseDto
 
@@ -13,4 +13,4 @@ data class HomeResponseDto(
     val errorHomeResponseDto: ErrorHomeResponseDto,
     @SerializedName("data")
     val successHomeResponseDto: SuccessHomeResponseDto
-) : Response
+) : HttpResponse

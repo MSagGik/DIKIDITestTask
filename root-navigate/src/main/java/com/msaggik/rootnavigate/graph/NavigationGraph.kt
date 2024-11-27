@@ -1,6 +1,8 @@
 package com.msaggik.rootnavigate.graph
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -17,7 +19,8 @@ fun NavigationGraph(
 ) {
     NavHost(
         navController = navController,
-        startDestination = ItemMenu.Home.route
+        startDestination = ItemMenu.Home.route,
+        Modifier.fillMaxSize()
     ) {
         composable(ItemMenu.Home.route) {
             homeContent()

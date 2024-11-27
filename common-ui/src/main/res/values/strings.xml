@@ -33,7 +33,13 @@
     <string name="until">until:</string>
     <string name="incorrect_date">Incorrect date</string>
     <string name="n_percent">%s%%</string>
-    <string name="view">view</string>
+    <string name="view">View</string>
     <string name="avatar">avatar</string>
     <string name="more_big">MORE</string>
+    <string name="logo">Logo</string>
+    <string name="enroll">Enroll</string>
+    <string name="popular">Popular</string>
+    <string name="no_data">No data</string>
+    <string name="star">Star</string>
+    <string name="form_distance">%s km</string>
 </resources>

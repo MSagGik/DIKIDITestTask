@@ -87,4 +87,6 @@ dependencies {
     implementation(project(":common-ui"))
     implementation(project(":common-utils"))
     implementation(project(":data-network"))
+    implementation(project(":data-location"))
+    implementation(project(":data-sp"))
 }

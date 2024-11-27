@@ -1,7 +1,11 @@
 package com.msaggik.featurehome.di
 
 import com.msaggik.featurehome.data.repositoryimpl.HomeNetworkRepositoryImpl
+import com.msaggik.featurehome.data.repositoryimpl.LocationRepositoryImpl
+import com.msaggik.featurehome.data.repositoryimpl.LocationRepositorySpImpl
 import com.msaggik.featurehome.domain.repository.HomeNetworkRepository
+import com.msaggik.featurehome.domain.repository.LocationRepository
+import com.msaggik.featurehome.domain.repository.LocationRepositorySp
 import com.msaggik.featurehome.domain.usecase.HomeInteractor
 import com.msaggik.featurehome.domain.usecase.impl.HomeInteractorImpl
 import com.msaggik.featurehome.presentation.viewmodel.HomeViewModel
@@ -19,7 +23,9 @@ val featureHomeModule = module {
     // domain
     single<HomeInteractor> {
         HomeInteractorImpl(
-            homeNetworkRepository = get()
+            homeNetworkRepository = get(),
+            locationRepository = get(),
+            locationRepositorySp = get()
         )
     }
     // data
@@ -27,6 +33,18 @@ val featureHomeModule = module {
         HomeNetworkRepositoryImpl(
             androidContext(),
             networkClient = get()
+        )
+    }
+
+    single<LocationRepository> {
+        LocationRepositoryImpl(
+            locationApi = get()
+        )
+    }
+
+    single<LocationRepositorySp> {
+        LocationRepositorySpImpl(
+            locationSharedPreferences = get()
         )
     }
 }

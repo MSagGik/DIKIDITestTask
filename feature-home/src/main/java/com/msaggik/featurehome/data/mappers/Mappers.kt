@@ -1,5 +1,6 @@
 package com.msaggik.featurehome.data.mappers
 
+import android.location.Location
 import com.msaggik.datanetwork.api.dto.HomeResponseDto
 import com.msaggik.datanetwork.api.dto.response.error.ErrorHomeResponseDto
 import com.msaggik.datanetwork.api.dto.response.success.SuccessHomeResponseDto
@@ -7,16 +8,18 @@ import com.msaggik.datanetwork.api.dto.response.success.blocks.BlocksDto
 import com.msaggik.datanetwork.api.dto.response.success.blocks.catalog.CatalogDto
 import com.msaggik.datanetwork.api.dto.response.success.blocks.shares.SharesDto
 import com.msaggik.datanetwork.api.dto.response.success.blocks.vip.VipDto
-import com.msaggik.featurehome.domain.model.HomeResponse
-import com.msaggik.featurehome.domain.model.error.ErrorHomeResponse
-import com.msaggik.featurehome.domain.model.success.SuccessHomeResponse
-import com.msaggik.featurehome.domain.model.success.blocks.Blocks
-import com.msaggik.featurehome.domain.model.success.blocks.catalog.Catalog
-import com.msaggik.featurehome.domain.model.success.blocks.catalog.currency.Currency
-import com.msaggik.featurehome.domain.model.success.blocks.shares.Share
-import com.msaggik.featurehome.domain.model.success.blocks.shares.Shares
-import com.msaggik.featurehome.domain.model.success.blocks.vip.Vip
-import com.msaggik.featurehome.domain.model.success.common.Image
+import com.msaggik.datasp.api.dto.LocationDto
+import com.msaggik.featurehome.domain.model.locationsp.LocationSp
+import com.msaggik.featurehome.domain.model.network.HomeResponse
+import com.msaggik.featurehome.domain.model.network.error.ErrorHomeResponse
+import com.msaggik.featurehome.domain.model.network.success.SuccessHomeResponse
+import com.msaggik.featurehome.domain.model.network.success.blocks.Blocks
+import com.msaggik.featurehome.domain.model.network.success.blocks.catalog.Catalog
+import com.msaggik.featurehome.domain.model.network.success.blocks.catalog.currency.Currency
+import com.msaggik.featurehome.domain.model.network.success.blocks.shares.Share
+import com.msaggik.featurehome.domain.model.network.success.blocks.shares.Shares
+import com.msaggik.featurehome.domain.model.network.success.blocks.vip.Vip
+import com.msaggik.featurehome.domain.model.network.success.common.Image
 
 object Mappers {
 
@@ -140,6 +143,41 @@ object Mappers {
                 ),
                 masterId = masterId ?: ""
             )
+        }
+    }
+
+    fun map(location: Location) : com.msaggik.featurehome.domain.model.location.Location {
+        return with(location) {
+            com.msaggik.featurehome.domain.model.location.Location(
+                latitude = latitude,
+                longitude = longitude
+            )
+        }
+    }
+
+    fun map(locationSp: LocationSp) : LocationDto {
+        return with(locationSp) {
+            LocationDto(
+                latitude = latitude,
+                longitude = longitude,
+                street = street,
+                house = house
+            )
+        }
+    }
+
+    fun map(locationDto: LocationDto?) : LocationSp? {
+        return if(locationDto != null) {
+            with(locationDto) {
+                LocationSp(
+                    latitude = latitude,
+                    longitude = longitude,
+                    street = street,
+                    house = house
+                )
+            }
+        } else {
+            null
         }
     }
 }
