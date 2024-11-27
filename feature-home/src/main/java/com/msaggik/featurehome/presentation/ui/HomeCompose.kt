@@ -5,18 +5,15 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
@@ -29,6 +26,7 @@ import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 import com.msaggik.commonui.R
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.HomeBaseContent
+import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.CascadingAnimation
 import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.ErrorMessage
 import com.msaggik.featurehome.presentation.ui.holders.toolbar.ExpandableToolbar
 
@@ -92,9 +90,7 @@ fun HomeCompose(
     ) {
         when (val currentState = homeState) {
             is HomeState.Loading -> {
-                CircularProgressIndicator(
-                    modifier = Modifier.padding(paddingValues)
-                )
+                CascadingAnimation(isLoading = true)
             }
 
             is HomeState.Content -> {
