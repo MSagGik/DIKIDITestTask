@@ -114,7 +114,7 @@ internal fun PremiumHolder(
                         .fillMaxWidth()
                         .padding(top = 16.dp),
                     thickness = 0.5.dp,
-                    color = MaterialTheme.colorScheme.tertiary.copy( alpha = 0.17f )
+                    color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.17f)
                 )
             }
         }

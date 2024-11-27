@@ -10,7 +10,7 @@ private const val LOCATION_KEY_SP = "location_key_sp"
 internal class LocationSharedPreferencesImpl(
     private val coordinateSp: SharedPreferences,
     private val gson: Gson,
-): LocationSharedPreferences {
+) : LocationSharedPreferences {
 
     override fun setLastCoordinate(location: LocationDto): Int {
         return runCatching {

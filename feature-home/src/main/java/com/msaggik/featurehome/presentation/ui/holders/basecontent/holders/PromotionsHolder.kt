@@ -49,7 +49,9 @@ internal fun PromotionsHolder(
     shares: List<Share>,
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(end = 16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(end = 16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {

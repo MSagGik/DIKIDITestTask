@@ -42,8 +42,6 @@ internal fun HomeBaseContent(
     ) {
         Spacer(Modifier.height(TOOLBAR_HEIGHT))
         // data response
-        val title = homeResponse.title
-        val image = homeResponse.image
         val catalogCount: String = homeResponse.catalogCount
         val catalogList = homeResponse.blocks.catalog
         val vip = homeResponse.blocks.vip
@@ -51,23 +49,23 @@ internal fun HomeBaseContent(
         val example1 = homeResponse.blocks.examples
         val example2 = homeResponse.blocks.examples2
         val exampleList = mutableListOf<String>()
-        if(example1.isNotEmpty()) exampleList.add(example1)
-        if(example2.isNotEmpty()) exampleList.add(example2)
+        if (example1.isNotEmpty()) exampleList.add(example1)
+        if (example2.isNotEmpty()) exampleList.add(example2)
 
-        if(catalogList.isNotEmpty()) {
+        if (catalogList.isNotEmpty()) {
             CatalogHolder(
                 numberCatalog = catalogCount,
                 catalogList = catalogList
             )
         }
-        if(vip.isNotEmpty()) {
+        if (vip.isNotEmpty()) {
             PremiumHolder(
                 premiumState = premiumState,
                 premiumNestedScrollConnection = premiumNestedScrollConnection,
                 vipList = vip
             )
         }
-        if(shares.isNotEmpty()) {
+        if (shares.isNotEmpty()) {
             PromotionsHolder(
                 promotionState = promotionState,
                 promotionNestedScrollConnection = promotionNestedScrollConnection,
@@ -75,7 +73,7 @@ internal fun HomeBaseContent(
             )
         }
 
-        if(catalogList.isNotEmpty()) {
+        if (catalogList.isNotEmpty()) {
             PopularHolder(
                 popularState = popularState,
                 popularNestedScrollConnection = popularNestedScrollConnection,
@@ -83,7 +81,7 @@ internal fun HomeBaseContent(
             )
         }
 
-        if(exampleList.isNotEmpty()) {
+        if (exampleList.isNotEmpty()) {
             ExamplesOfWorksHolder(examplesOfWorksUri = exampleList)
         }
 

@@ -19,7 +19,7 @@ private val TOOLBAR_HEIGHT = 50.dp
 internal fun ExpandableToolbar(
     scrollState: ScrollState,
     searchQuery: String,
-    onQueryChange: (String)->Unit,
+    onQueryChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     locationName: String,
     content: @Composable () -> Unit,

@@ -29,6 +29,7 @@ import com.msaggik.featurehome.presentation.ui.holders.basecontent.common.Header
 import kotlinx.coroutines.delay
 
 private const val DELAY_ANIMATION = 5000L
+
 @Composable
 internal fun ExamplesOfWorksHolder(
     examplesOfWorksUri: List<String>
@@ -46,7 +47,8 @@ internal fun ExamplesOfWorksHolder(
         AsyncImage(
             modifier = Modifier
                 .padding(horizontal = 16.dp)
-                .fillMaxWidth().height(250.dp)
+                .fillMaxWidth()
+                .height(250.dp)
                 .clip(RoundedCornerShape(16.dp)),
             model = ImageRequest.Builder(LocalContext.current)
                 .data(imageUri)

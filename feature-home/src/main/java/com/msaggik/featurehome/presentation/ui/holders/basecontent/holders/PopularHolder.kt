@@ -112,7 +112,7 @@ internal fun PopularHolder(
                             contentScale = ContentScale.Crop,
                             painter = painterResource(id = com.msaggik.commonui.R.drawable.catalog_placeholder),
                             contentDescription = stringResource(id = com.msaggik.commonui.R.string.error_load_image),
-                            )
+                        )
                     },
                     contentDescription = stringResource(id = com.msaggik.commonui.R.string.logo),
                 )

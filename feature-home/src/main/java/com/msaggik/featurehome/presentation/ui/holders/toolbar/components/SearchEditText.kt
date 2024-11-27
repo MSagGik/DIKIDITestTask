@@ -34,7 +34,9 @@ internal fun RowScope.SearchEditText(
     var searchQueryExample by remember { mutableStateOf("") }
 
     TextField(
-        modifier = Modifier.weight(1f).height(50.dp),
+        modifier = Modifier
+            .weight(1f)
+            .height(50.dp),
         value = searchQueryExample,
         onValueChange = { newText ->
             searchQueryExample = newText
@@ -69,7 +71,9 @@ internal fun RowScope.SearchEditText(
         ),
         leadingIcon = {
             Icon(
-                modifier = Modifier.size(25.dp).padding(start = 5.dp),
+                modifier = Modifier
+                    .size(25.dp)
+                    .padding(start = 5.dp),
                 painter = painterResource(id = com.msaggik.commonui.R.drawable.ic_search),
                 contentDescription = stringResource(com.msaggik.commonui.R.string.search),
                 tint = MaterialTheme.colorScheme.secondary
