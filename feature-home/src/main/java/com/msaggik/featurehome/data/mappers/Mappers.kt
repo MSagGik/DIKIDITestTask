@@ -146,7 +146,7 @@ object Mappers {
         }
     }
 
-    fun map(location: Location) : com.msaggik.featurehome.domain.model.location.Location {
+    fun map(location: Location): com.msaggik.featurehome.domain.model.location.Location {
         return with(location) {
             com.msaggik.featurehome.domain.model.location.Location(
                 latitude = latitude,
@@ -155,7 +155,7 @@ object Mappers {
         }
     }
 
-    fun map(locationSp: LocationSp) : LocationDto {
+    fun map(locationSp: LocationSp): LocationDto {
         return with(locationSp) {
             LocationDto(
                 latitude = latitude,
@@ -166,8 +166,8 @@ object Mappers {
         }
     }
 
-    fun map(locationDto: LocationDto?) : LocationSp? {
-        return if(locationDto != null) {
+    fun map(locationDto: LocationDto?): LocationSp? {
+        return if (locationDto != null) {
             with(locationDto) {
                 LocationSp(
                     latitude = latitude,

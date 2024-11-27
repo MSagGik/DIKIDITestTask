@@ -29,7 +29,7 @@ val settingsDataModule = module {
 
 private fun Context.getEncryptedSharedPreferences(
     nameDataFile: String
-) : SharedPreferences {
+): SharedPreferences {
     return EncryptedSharedPreferences.create(
         this,
         nameDataFile,
