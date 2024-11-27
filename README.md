@@ -27,6 +27,31 @@
 
 ![Архитектура](./media/architecture_diagram.png)
 
+## Скриншоты приложения:
+
+### Главный экран
+<p align="left">
+<img src="./media/screen_home_light_theme_one_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_home_light_theme_two_ru_en_zh.png"/>
+</p>
+
+<p align="left">
+<img src="./media/screen_home_dark_theme_one_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_home_dark_theme_two_ru_en_zh.png"/>
+</p>
+
+### Пример экрана в разработке
+<p align="left">
+<img src="./media/screen_catalog_light_theme_ru_en_zh.png"/>
+</p>
+<p align="left">
+<img src="./media/screen_catalog_dark_theme_ru_en_zh.png"/>
+</p>
+
 ## Дополнительная информация
 Данное приложение является многомодульным, с адаптивной темой (светлой/тёмной), мультиязычным интерфейсом,
 поддержкой локации и алгоритмом расчёта навигационных расстояний.
